@@ -1,0 +1,62 @@
+/* Sidebar Styles */
+@media (max-width: 767.98px) {
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        width: 100%;
+        background-color: black;
+        padding: 1rem;
+    }
+
+    .btn-dark {
+        background-color: black;
+        border-radius: 0;
+    }
+
+    /* .main-content {
+        margin-top: 60px;
+    } */
+}
+
+/* Ensure sidebar takes full height on desktop */
+@media (min-width: 768px) {
+    .sidebar {
+        min-height: 100vh;
+        background-color: black;
+    }
+}
+
+.sidebar .nav-link {
+    color: #ffffff;
+    padding: 15px 15px;
+    margin: 5px 0;
+    transition: all 0.3s;
+}
+
+.sidebar .nav-link:hover {
+    background-color: #ff0000;
+    color: #ffffff;
+}
+
+.sidebar .nav-link.active {
+    background-color: #ff0000;
+}
+
+/* Main Content Styles */
+.main-content {
+    background-color: black;
+    min-height: 100vh;
+    /* padding: 20px; */
+    color: white;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #000000;
+}
+
+.navbar-brand {
+    color: #ff0000 !important;
+}
