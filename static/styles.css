@@ -33,11 +33,17 @@
     padding: 15px 15px;
     margin: 5px 0;
     transition: all 0.3s;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
 }
 
 .sidebar .nav-link:hover {
     background-color: #ff0000;
     color: #ffffff;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
 }
 
 .sidebar .nav-link.active {
@@ -48,8 +54,15 @@
 .main-content {
     background-color: black;
     min-height: 100vh;
+    max-width: 100%;
     /* padding: 20px; */
     color: white;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 450;
+    font-style: normal;
+    font-size: x-large;
+    text-align: center;
 }
 
 /* Navbar Styles */
