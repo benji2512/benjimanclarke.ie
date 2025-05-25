@@ -1,0 +1,30 @@
+{% set navigation_bar = [
+('/', 'index', ' Home', 'nav-link bi bi-house-door'),
+('/aboutben', 'aboutben', ' About', 'nav-link bi bi-person-arms-up'),
+('/career', 'career', ' Career', 'nav-link bi bi-person-badge'),
+('/projects', 'projects', ' Projects', 'nav-link bi bi-person-workspace'),
+('/contact', 'findme', ' FindMe', 'nav-link bi bi-person-lines-fill'),
+('/blog', 'blog', ' Blog', 'nav-link bi bi-substack')
+] -%}
+{% set active_page = active_page|default('index') -%}
+
+<!-- Mobile Toggle Button -->
+<button class="btn btn-dark d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar"
+  aria-expanded="false" aria-controls="sidebar">
+  <i class="bi bi-list"></i> Navigate Me
+</button>
+
+<!-- Sidebar -->
+<div class="col-md-3 col-lg-2 sidebar collapse d-md-block" id="sidebar">
+  <div class="position-sticky">
+    <div class="text-center mb-2">
+      <img src="/static/initial.jpeg" class="img-fluid" />
+    </div>
+    <ul class="nav nav-pills flex-column mb-auto text-center">
+      {% for href, id, caption, class in navigation_bar %}
+        <li{% if id==active_page %} class="active" {% endif %}>
+        <a class="{{ class|e }}" href="{{ href|e }}">{{ caption|e }}</a></li>
+        {% endfor %}
+    </ul>
+  </div>
+</div>
