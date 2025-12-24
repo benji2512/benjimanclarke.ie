@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Benjiman Clarke</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <!-- Custom CSS -->
+  <link href="static/styles.css" rel="stylesheet" />
+  <!-- Playfair Display Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Mobile Toggle Button -->
+<button class="btn btn-dark d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar"
+  aria-expanded="false" aria-controls="sidebar">
+  <i class="bi bi-list"></i> Navigate Me
+</button>
+
+<!-- Sidebar -->
+<div class="col-md-3 col-lg-2 sidebar collapse d-md-block" id="sidebar">
+  <div class="position-sticky">
+    <div class="text-center mb-2">
+      <img src="/static/initial.jpeg" class="img-fluid" />
+    </div>
+    <ul class="nav nav-pills flex-column mb-auto text-center">
+      
+        <li>
+        <a class="nav-link bi bi-house-door" href="/"> Home</a></li>
+        
+        <li>
+        <a class="nav-link bi bi-person-arms-up" href="/aboutben"> About</a></li>
+        
+        <li class="active" >
+        <a class="nav-link bi bi-person-badge" href="/career"> Career</a></li>
+        
+        <li>
+        <a class="nav-link bi bi-person-workspace" href="/projects"> Projects</a></li>
+        
+        <li>
+        <a class="nav-link bi bi-person-lines-fill" href="/contact"> FindMe</a></li>
+        
+        <li>
+        <a class="nav-link bi bi-substack" href="/blog"> Blog</a></li>
+        
+    </ul>
+  </div>
+</div>
+      
+
+      
+
+<!-- Main Content -->
+<div class="col-md-9 col-lg-10 main-content">
+    <div class="container">
+        <img src="/static/mycareer.jpeg" class="img-fluid" style="text-align: center;"/>
+        <p>
+            Wit say I, grit say others, luck most will say.
+        </p>
+        <br>
+        <h3>
+            The Highlights: TLDR
+        </h3>
+        <ul class="list-group list-group-numbered">
+            <li class="list-group-item" style="background-color: black;color: white;border: none;">Gorey Community School</li>
+            <li class="list-group-item" style="background-color: black;color: white;border: none;">Dublin City University</li>
+            <li class="list-group-item" style="background-color: black;color: white;border: none;">Browserstack</li>
+            <li class="list-group-item" style="background-color: black;color: white;border: none;">IBM</li>
+        </ul>
+        <br>
+        <p>
+            Still want me to tell you how I ended up in IBM? Alright, you'll absolutely need that tea or coffee I offered earlier!
+        </p>
+    </div>
+</div>
+
+    </div>
+  </div>
+</body>
+<!-- Bootstrap JS and dependencies -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</html>
