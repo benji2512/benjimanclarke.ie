@@ -1,0 +1,15 @@
+{# templates/blog_detail.html #}
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>{{ post.meta.title }}</title>
+    </head>
+    <body>
+        <a href="{{ url_for('blog') }}">← Back to blog</a>
+        <h1>{{ post.meta.title }}</h1>
+        <p><small>{{ post.meta.date.strftime('%Y-%m-%d') }}</small></p>
+
+        <article>{{ post.html|safe }}</article>
+    </body>
+</html>
