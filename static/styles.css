@@ -65,6 +65,14 @@
     text-align: center;
 }
 
+.main-content a {
+    color: inherit;
+}
+
+img.img-fluid {
+    margin-bottom: 20px; /* This adds 20px padding to the bottom of the image */
+}
+
 /* Navbar Styles */
 .navbar {
     background-color: #000000;
