@@ -1,15 +1,24 @@
-{% extends "layout.html" %}
-{% set active_page = "blog" %}
-{% block content %}
+{% extends "layout.html" %} {% set active_page = "blog" %} {% block content %}
 
 <!-- Main Content -->
 <div class="col-md-9 col-lg-10 main-content">
     <div class="container">
-        <h1>Blog banner here</h1>
-        <p>
-            This is your main content area. You can add whatever
-            content you need here.
-        </p>
+        <body>
+            <h1>Ben's Random Thoughts</h1>
+
+            <ul>
+                {% for post in posts %}
+                <li>
+                    <a
+                        href="{{ url_for('blog_detail', slug=post.path.split('/')[-1]) }}"
+                    >
+                        {{ post.meta.title }}
+                    </a>
+                    <small>{{ post.meta.date.strftime('%Y-%m-%d') }}</small>
+                </li>
+                {% endfor %}
+            </ul>
+        </body>
     </div>
 </div>
 {% endblock %}
