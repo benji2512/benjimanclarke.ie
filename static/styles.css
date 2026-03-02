@@ -81,3 +81,15 @@ img.img-fluid {
 .navbar-brand {
     color: #ff0000 !important;
 }
+
+.post-body {
+    text-align: left;
+    padding-top: 30px;
+    list-style-type: circle;
+}
+
+.no-bullets {
+    list-style-type: none;
+    padding-left: 0;
+    margin-left: 0;
+}
