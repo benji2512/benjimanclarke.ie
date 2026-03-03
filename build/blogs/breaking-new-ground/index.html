@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Benjiman Clarke</title>
+    <!-- Bootstrap CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    />
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+        rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link href="/static/styles.css" rel="stylesheet" />
+    <!-- Playfair Display Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:ital,wght@0,400;1,400&display=swap"
+        rel="stylesheet"
+    />
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Mobile Toggle Button -->
+<button class="btn btn-dark d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar"
+  aria-expanded="false" aria-controls="sidebar">
+  <i class="bi bi-list"></i> Navigate Me
+</button>
+
+<!-- Sidebar -->
+<div class="col-md-3 col-lg-2 sidebar collapse d-md-block" id="sidebar">
+  <div class="position-sticky">
+    <div class="text-center mb-2">
+      <img src="/static/initial.jpeg" class="img-fluid" />
+    </div>
+    <ul class="nav nav-pills flex-column mb-auto text-center">
+      
+        <li>
+        <a class="nav-link bi bi-house-door" href="/"> Home</a></li>
+        
+        <li>
+        <a class="nav-link bi bi-person-arms-up" href="/aboutben"> About</a></li>
+        
+        <li>
+        <a class="nav-link bi bi-person-badge" href="/career"> Career</a></li>
+        
+        <li>
+        <a class="nav-link bi bi-person-workspace" href="/projects"> Projects</a></li>
+        
+        <li>
+        <a class="nav-link bi bi-person-lines-fill" href="/contact"> FindMe</a></li>
+        
+        <li class="active" >
+        <a class="nav-link bi bi-substack" href="/blog"> Blog</a></li>
+        
+    </ul>
+  </div>
+</div>
+      
+
+      
+<!-- Main Content -->
+<div class="col-md-9 col-lg-10 main-content">
+    <div class="container">
+        <h1>Breaking New Ground</h1>
+        
+        <p>2026-03-02</p>
+        
+        <div class="post-body"><h2>TLDR: I am starting a blog to share my thoughts and experiences.</h2>
+<ul>
+<li>Because I can</li>
+<li>To practise my writing skills</li>
+<li>To relearn that hobbling things together is not as easy as it seems</li>
+<li>I got bored in work 1 day</li>
+</ul>
+<h2><u>Because I can</u></h2>
+<p>It might sound childish and annoying, but in all honesty, it is the reason I did plan this website this way. I wanted something to work on over time and at my own pace. I've built many a website, some good, most really bad. But nothing that I felt was really MINE. Templates are great and every language has its own way of applying things, and I spent a long time doing these things. I wanted to go back to that start, with a (in my case) black screen and an empty project tree. Where do I go from here ¯_(ツ)_/¯<br />
+I have a thing I want to do over time, and that thing is to relearn the Irish language. But I didn't want to do the whole "get classes, get annoyed I'm doing classes, not go to the classes, get annoyed I can't speak Irish". Mainly because it's a vicious cycle. However, what if I combined story telling and website making and made the story about myself? see where I am going with this?<br />
+I read about HTMX and became fasinated about the idea of not having to use javascript, or something that mimics it in another language, to make things do fun things on webpages. So why not try and merge these 3 things together?<br />
+Build a website about the story of me, translate it into Irish and use HTMX to make the translations happen in place on certain parts of the page.<br />
+This satifies the 3 key requirements[sorry, force of habit :( ] for my little personal project.  </p>
+<h2><u>To Practise my writing skills</u></h2>
+<p>Having spent so long not writing in long form, only short snippets during University that had to be followed up with research and form filling, you really do get out of practise with it. I'll talk for Ireland but never write it down. So I might as well start now. I want this to feel like a conversation(albeit one sided) so I will type what the little voice in my head tells me too, which feels more like a blog and not an article or opinion piece. I am also not going to write it in Word or Docs or Libre Office and copy it over. I will be writing it in Markdown straight from my text editor(Zed for this post) and raw-dogging the process, so expect the odd grammer or spelling mistake. I'm not perfect so nor will this website be either.  </p>
+<h2><u>To relearn that hobbling things together is not as easy as it seems</u></h2>
+<p>"Ahh, sure it won't be to hard" are the famous last words I have uttered many times. And pretty much all of those times, it was indeed very hard. I have been doing some homelabbing over the last year or so and learn that those words become said increasing less as your lab grows. But I've scaled that back, and revaluated where and what somethings I was doing, live and do. On such thing was self host this website. Turns out, it wasn't as hard as I thought it would be BUT availability can be an issue. Especially when power outages are somewhat frequent and DNS issues are abundant because I don't know what I'm doing. So using the free services on hand like Cloudflare and GitHub, it turns out you can have a highly available website without having to worry about your homelab's dodgy owner making it unavailable.  </p>
+<h2><u>I got bored in work 1 day</u></h2>
+<p>As of writing this, I am blocked on 2 tickets in work, awaiting word back from various people. So to finish off the last hour of my day, I decided to start this blog.  </p>
+<p>I'll end with a half promise. I promise to do this semi frequently, and make this website something I can show off.  </p>
+<p>Right, I'm off to het a coffee. Slán :goodbye-wave:</p></div>
+    </div>
+</div>
+
+    </div>
+  </div>
+</body>
+<!-- Bootstrap JS and dependencies -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</html>
