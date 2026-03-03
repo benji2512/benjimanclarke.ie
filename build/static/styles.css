@@ -88,8 +88,35 @@ img.img-fluid {
     list-style-type: circle;
 }
 
-.no-bullets {
+.blog-list {
     list-style-type: none;
     padding-left: 0;
     margin-left: 0;
+}
+
+.post-sep {
+    border: 0;
+    border-top: 1px solid lightgrey;
+    margin: 0.75rem 0;
+}
+
+/* Make each item feel like a card/row */
+.blog-list li {
+    padding: 0.9rem 0.75rem;
+    border-radius: 8px;
+    transition:
+        background-color 120ms ease,
+        box-shadow 120ms ease;
+}
+
+/* Highlight the whole LI */
+.blog-list li:hover {
+    background: #f3f4f6; /* light grey */
+    box-shadow: 0 0 0 1px #e5e7eb inset;
+}
+
+/* Make the main title link fill the row width (helps “whole row” feel) */
+.blog-list li a {
+    display: block;
+    text-decoration: none;
 }
