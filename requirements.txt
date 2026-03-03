@@ -11,7 +11,6 @@ itsdangerous==2.2.0
 Jinja2==3.1.6
 Markdown==3.10
 MarkupSafe==3.0.3
--e git+ssh://git@github.com/benji2512/PLfixturesAPI.git@3945bf480ed3685935f7cd0aad9e9527cd0a2f52#egg=plfixturesapi
 pydantic==2.12.5
 pydantic_core==2.41.5
 python-dateutil==2.9.0.post0
