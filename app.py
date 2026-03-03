@@ -37,7 +37,7 @@ def blog():
     return render_template("blog.html", posts=posts)
 
 
-@app.route("/blog/<slug>/")
+@app.route("/blogs/<slug>/")
 def blog_detail(slug: str):
     post = get_post(slug)
     if not post:

@@ -33,7 +33,7 @@
     padding: 15px 15px;
     margin: 5px 0;
     transition: all 0.3s;
-    font-family: "Playfair Display", serif;
+    font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
 }
@@ -41,7 +41,7 @@
 .sidebar .nav-link:hover {
     background-color: #ff0000;
     color: #ffffff;
-    font-family: "Playfair Display", serif;
+    font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
 }
@@ -57,12 +57,20 @@
     max-width: 100%;
     /* padding: 20px; */
     color: white;
-    font-family: "Playfair Display", serif;
+    font-family: "Open Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: 450;
     font-style: normal;
-    font-size: large;
+    font-size: x-large;
     text-align: center;
+}
+
+.main-content a {
+    color: inherit;
+}
+
+img.img-fluid {
+    margin-bottom: 20px; /* This adds 20px padding to the bottom of the image */
 }
 
 /* Navbar Styles */
@@ -72,4 +80,16 @@
 
 .navbar-brand {
     color: #ff0000 !important;
+}
+
+.post-body {
+    text-align: left;
+    padding-top: 30px;
+    list-style-type: circle;
+}
+
+.no-bullets {
+    list-style-type: none;
+    padding-left: 0;
+    margin-left: 0;
 }
