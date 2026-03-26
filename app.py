@@ -48,3 +48,10 @@ def blog_detail(slug: str):
 @app.route("/projects")
 def projects():
     return render_template("projects.html")
+
+
+@app.route("/sitemap.xml")
+def sitemap():
+    posts = get_posts()
+    from flask import make_response, render_template
+    return make_response(render_template("sitemap.xml", posts=posts))
