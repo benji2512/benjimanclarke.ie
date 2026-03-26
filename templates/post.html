@@ -1,12 +1,15 @@
-{% extends "layout.html" %} {% set active_page = "blog" %} {% set page_title = post.title + " | Benjiman Clarke" %} {% set og_title = post.title %} {% set og_description = post.description or "Blog post by Benjiman Clarke" %} {% set og_type = "article" %} {% block content %}
-<!-- Main Content -->
-<div class="col-md-9 col-lg-10 main-content">
-    <div class="container">
-        <h1>{{ post.title }}</h1>
-        {% if post.date %}
-        <p>{{ post.date.strftime('%Y-%m-%d') }}</p>
-        {% endif %}
-        <div class="post-body">{{ post.html | safe }}</div>
-    </div>
+{% extends "layout.html" %}
+{% set active_page = "blog" %}
+{% set page_title = post.title + " | Benjiman Clarke" %}
+{% set og_title = post.title %}
+{% set og_description = post.description or "Blog post by Benjiman Clarke" %}
+{% set og_type = "article" %}
+{% block content %}
+<div class="container">
+    <h1>{{ post.title }}</h1>
+    {% if post.date %}
+    <p>{{ post.date.strftime('%Y-%m-%d') }}</p>
+    {% endif %}
+    <div class="post-body">{{ post.html | safe }}</div>
 </div>
 {% endblock %}

@@ -41,12 +41,13 @@
     />
 </head>
 <body>
-{% include 'navbar.html' %}
-
 <div class="container-fluid">
     <div class="row">
-      {% block content %}
-      {% endblock %}
+        {% include 'navbar.html' %}
+        <div class="col-md-9 col-lg-10 main-content">
+            {% block content %}
+            {% endblock %}
+        </div>
     </div>
 </div>
 <!-- Bootstrap JS and dependencies -->
