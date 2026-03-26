@@ -1,10 +1,6 @@
-{% extends "layout.html" %} {% set active_page = "aboutben" %} {% block content
-%}
-
-<!-- Main Content -->
-<div class="col-md-9 col-lg-10 main-content">
-    <div class="container">
-        <img src="/static/aboutme.jpeg" class="img-fluid" height="" />
+{% extends "layout.html" %} {% set active_page = "aboutben" %} {% set page_title = "About Me | Benjiman Clarke" %} {% set og_title = "About Me | Benjiman Clarke" %} {% set og_description = "Learn more about Benjiman Clarke - software developer, coach, and traveler." %} {% set og_type = "website" %} {% block content %}
+<div class="container">
+        <img src="/static/aboutme.jpeg" class="img-fluid" height="" loading="lazy" />
         <p>A big picture means a big story right? Well... you'd be right!</p>
         <p>I pinky promise that I did not write any of this with any AI</p>
         <p>
@@ -55,5 +51,4 @@
             <a href="/career">Click here to visit my career page</a>
         </p>
     </div>
-</div>
 {% endblock %}

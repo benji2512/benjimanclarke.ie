@@ -1,12 +1,13 @@
 {% extends "layout.html" %}
 {% set active_page = "index" %}
+{% set page_title = "Benjiman Clarke | Software Developer" %}
+{% set og_title = "Benjiman Clarke | Software Developer" %}
+{% set og_description = "Welcome to my personal website. Learn more about me as a software developer and as a person." %}
+{% set og_type = "website" %}
 {% block content %}
-
-<!-- Main Content -->
-<div class="col-md-9 col-lg-10 main-content">
-    <div class="container">
+<div class="container">
         <!-- <h1>Benjiman Clarke | Software Developer</h1> -->
-        <img src="/static/banner1.jpeg" class="img-fluid" style="padding-top: 2vh; padding-bottom: 2vh;"/>
+        <img src="/static/banner1.jpeg" class="img-fluid" style="padding-top: 2vh; padding-bottom: 2vh;" loading="lazy"/>
         <p>
             Welcome, welcome, welcome. Come in out of the rain. Do you want a cup of tea or coffee?
         </p>
@@ -29,5 +30,4 @@
             Go raibh míle maith agat agus slán go fóill!
         </p>
     </div>
-</div>
 {% endblock %}

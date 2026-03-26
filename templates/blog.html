@@ -1,9 +1,12 @@
-{% extends "layout.html" %} {% set active_page = "blog" %} {% block content %}
-
-<!-- Main Content -->
-<div class="col-md-9 col-lg-10 main-content">
-    <div class="container">
-        <img src="/static/blogBanner.png" class="img-fluid" height="" />
+{% extends "layout.html" %}
+{% set active_page = "blog" %}
+{% set page_title = "Blog | Benjiman Clarke" %}
+{% set og_title = "Blog | Benjiman Clarke" %}
+{% set og_description = "Thoughts, tutorials, and updates from my blog." %}
+{% set og_type = "website" %}
+{% block content %}
+<div class="container">
+        <img src="/static/blogBanner.png" class="img-fluid" height="" loading="lazy" />
         <!---Create a header image -->
         <ul class="blog-list">
             {% for post in posts %}
@@ -22,5 +25,4 @@
             {% endfor %}
         </ul>
     </div>
-</div>
 {% endblock %}
