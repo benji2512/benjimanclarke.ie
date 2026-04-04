@@ -1,4 +1,10 @@
-{% extends "layout.html" %} {% set active_page = "findme" %} {% set page_title = "Find Me | Benjiman Clarke" %} {% set og_title = "Find Me | Benjiman Clarke" %} {% set og_description = "Get in touch with Benjiman Clarke via email, LinkedIn, or GitHub." %} {% set og_type = "website" %} {% block content %}
+{% extends "layout.html" %} 
+{% set active_page = "findme" %} 
+{% set page_title = "Find Me | Benjiman Clarke" %} 
+{% set og_title = "Find Me | Benjiman Clarke" %} 
+{% set og_description = "Get in touch with Benjiman Clarke via email, LinkedIn, or GitHub." %} 
+{% set og_type = "website" %} 
+{% block content %}
 <div class="container">
         <img src="/static/aiFindMeBanner.jpeg" class="img-fluid" height="" loading="lazy" />
         <p>If you're looking to contact me, you've come to the right place!</p>
@@ -14,5 +20,27 @@
             and you can see the projects I start on
             <a href="https://github.com/benji2512">GitHub</a>
         </p>
+        <hr>
+        <h3>Send a Message</h3>
+        <p>Or fill out the form below and I'll get back to you:</p>
+        
+        <form hx-post="/contact/submit" hx-swap="outerHTML" id="contact-form">
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" name="name" required placeholder="Your name">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email" required placeholder="your@email.com">
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" name="message" rows="4" required placeholder="Your message..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" id="submit-btn">
+                <span>Send Message</span>
+                <span class="htmx-indicator">Sending...</span>
+            </button>
+        </form>
     </div>
 {% endblock %}

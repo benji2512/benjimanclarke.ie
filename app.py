@@ -31,6 +31,20 @@ def contact():
     return render_template("findme.html")
 
 
+@app.route("/contact/submit", methods=["POST"])
+def contact_submit():
+    name = request.form.get("name")
+    email = request.form.get("email")
+    message = request.form.get("message")
+    # In production, send email here via SMTP, SendGrid, etc.
+    return f"""
+    <div class="alert alert-success" role="alert">
+        <h4 class="alert-heading">Message Sent!</h4>
+        <p>Thanks {name}! I'll get back to you at {email} soon.</p>
+    </div>
+    """
+
+
 @app.route("/blog")
 def blog():
     posts = get_posts()
