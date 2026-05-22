@@ -50,6 +50,10 @@
     background-color: #ff0000;
 }
 
+.container {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
 /* Main Content Styles */
 .main-content {
     background-color: black;
@@ -96,13 +100,13 @@ img.img-fluid {
 
 .post-sep {
     border: 0;
-    border-top: 1px solid lightgrey;
+    border-top: 3px solid white;
     margin: 0.75rem 0;
 }
 
 /* Make each item feel like a card/row */
 .blog-list li {
-    padding: 0.9rem 0.75rem;
+    padding: 0.9rem 0.9rem;
     border-radius: 8px;
     transition:
         background-color 120ms ease,
@@ -111,7 +115,7 @@ img.img-fluid {
 
 /* Highlight the whole LI */
 .blog-list li:hover {
-    background: #f3f4f6; /* light grey */
+    /*background: #020617; /* light grey */
     box-shadow: 0 0 0 1px #e5e7eb inset;
 }
 
@@ -119,4 +123,22 @@ img.img-fluid {
 .blog-list li a {
     display: block;
     text-decoration: none;
+}
+
+p {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+/* HTMX indicator states */
+.htmx-indicator {
+    display: none;
+}
+
+.htmx-request .htmx-indicator {
+    display: inline;
+}
+
+.htmx-request > span:not(.htmx-indicator) {
+    display: none;
 }

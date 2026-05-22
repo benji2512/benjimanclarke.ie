@@ -45,18 +45,18 @@ def contact_submit():
     """
 
 
-@app.route("/blog")
-def blog():
-    posts = get_posts()
-    return render_template("blog.html", posts=posts)
+# @app.route("/blog")
+# def blog():
+#     posts = get_posts()
+#     return render_template("blog.html", posts=posts)
 
 
-@app.route("/blogs/<slug>/")
-def blog_detail(slug: str):
-    post = get_post(slug)
-    if not post:
-        abort(404)
-    return render_template("post.html", post=post)
+# @app.route("/blogs/<slug>/")
+# def blog_detail(slug: str):
+#     post = get_post(slug)
+#     if not post:
+#         abort(404)
+#     return render_template("post.html", post=post)
 
 
 @app.route("/projects")
