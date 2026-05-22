@@ -129,3 +129,16 @@ p {
     margin-bottom: 0;
     margin-top: 0;
 }
+
+/* HTMX indicator states */
+.htmx-indicator {
+    display: none;
+}
+
+.htmx-request .htmx-indicator {
+    display: inline;
+}
+
+.htmx-request > span:not(.htmx-indicator) {
+    display: none;
+}
