@@ -1,0 +1,5 @@
+# Copy these values into Cloudflare Workers as encrypted secrets.
+# Never commit a real API key to this repository.
+RESEND_API_KEY=
+CONTACT_FROM_EMAIL=
+CONTACT_TO_EMAIL=

@@ -1,0 +1,6 @@
+name = "benjimanclarkeie"
+main = "worker.mjs"
+compatibility_date = "2025-12-07"
+
+[assets]
+directory = "./build"

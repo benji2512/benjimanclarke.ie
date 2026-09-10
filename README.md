@@ -47,9 +47,23 @@ This generates static HTML in the `build/` directory for deployment.
 
 ### Deployment
 
-Pushing to `main` triggers the configured Cloudflare Workers Build. It generates and deploys the static `build/` output to `https://benjimanclarke.ie`.
+Pushing to `main` triggers the configured Cloudflare Workers Build. It runs `python freeze.py` and deploys the static `build/` output to `https://benjimanclarke.ie`.
 
-The site is static in production: Flask is used at build time to render pages, not as a continuously running web server.
+The site is static in production: Flask is used at build time to render pages, not as a continuously running web server. `wrangler.toml` defines the Worker entry point and the static asset directory, so the existing deployment command can deploy both the static site and the contact-form endpoint.
+
+### Contact form configuration
+
+The Worker accepts `POST /contact/submit`, validates the form, sends messages through Resend, and redirects to static success or error pages. Core form submission works without JavaScript.
+
+Before deploying the contact form, add these encrypted Cloudflare Worker secrets in the dashboard:
+
+- `RESEND_API_KEY`
+- `CONTACT_FROM_EMAIL`
+- `CONTACT_TO_EMAIL`
+
+Use `.dev.vars.example` as the local configuration template. Copy it to `.dev.vars` for local Worker testing; `.dev.vars` is intentionally ignored by Git.
+
+Also configure a Cloudflare rate-limiting rule for `POST /contact/submit` before enabling the form in production. That rule is deliberately dashboard configuration rather than application state: start with a per-IP limit of 5 requests per 10 minutes and block excess requests for 10 minutes.
 
 ### Features
 
