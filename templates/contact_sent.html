@@ -3,9 +3,11 @@
 {% set page_title = "Message Sent | Benjiman Clarke" %}
 {% set og_title = "Message Sent | Benjiman Clarke" %}
 {% block content %}
-<div class="container">
-    <h1>Message sent</h1>
-    <p>Thanks for getting in touch. I’ll get back to you as soon as I can.</p>
-    <p><a class="btn btn-primary" href="/contact">Back to contact</a></p>
+<div class="container contact-page">
+    <section class="contact-feedback contact-feedback--success" aria-labelledby="contact-result-heading">
+        <h1 id="contact-result-heading">Message sent</h1>
+        <p>Thanks for getting in touch. I’ll get back to you as soon as I can.</p>
+        <p><a class="btn btn-primary" href="/contact">Back to contact</a></p>
+    </section>
 </div>
 {% endblock %}
