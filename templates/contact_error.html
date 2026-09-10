@@ -3,9 +3,11 @@
 {% set page_title = "Message Not Sent | Benjiman Clarke" %}
 {% set og_title = "Message Not Sent | Benjiman Clarke" %}
 {% block content %}
-<div class="container">
-    <h1>Sorry, your message couldn't send</h1>
-    <p>Please try again, or email me directly at <a href="mailto:benthedev@outlook.com">benthedev@outlook.com</a>.</p>
-    <p><a class="btn btn-primary" href="/contact">Try again</a></p>
+<div class="container contact-page">
+    <section class="contact-feedback contact-feedback--error" aria-labelledby="contact-result-heading">
+        <h1 id="contact-result-heading">Sorry, your message couldn't send</h1>
+        <p>Please try again, or email me directly at <a href="mailto:benthedev@outlook.com">benthedev@outlook.com</a>.</p>
+        <p><a class="btn btn-primary" href="/contact">Try again</a></p>
+    </section>
 </div>
 {% endblock %}
