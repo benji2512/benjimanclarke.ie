@@ -1,9 +1,8 @@
-from flask import Flask, abort, render_template, request, url_for
+from flask import Flask, abort, render_template, url_for
 
 from blogs import get_post, get_posts
 
 app = Flask(__name__)
-app.config["SECRET_KEY"] = "your secret key"
 
 
 @app.route("/helloworld")
@@ -31,18 +30,14 @@ def contact():
     return render_template("findme.html")
 
 
-@app.route("/contact/submit", methods=["POST"])
-def contact_submit():
-    name = request.form.get("name")
-    email = request.form.get("email")
-    message = request.form.get("message")
-    # In production, send email here via SMTP, SendGrid, etc.
-    return f"""
-    <div class="alert alert-success" role="alert">
-        <h4 class="alert-heading">Message Sent!</h4>
-        <p>Thanks {name}! I'll get back to you at {email} soon.</p>
-    </div>
-    """
+@app.route("/contact-sent")
+def contact_sent():
+    return render_template("contact_sent.html")
+
+
+@app.route("/contact-error")
+def contact_error():
+    return render_template("contact_error.html")
 
 
 # @app.route("/blog")
