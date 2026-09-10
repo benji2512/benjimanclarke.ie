@@ -1,15 +1,13 @@
 # My Portfolio Website
 
-A personal portfolio website built with Flask, deployed on my homelab server.
+A personal portfolio website built with Flask templates and published as a static site through Cloudflare Workers Builds.
 
 ### Tech Stack
 
-- **Backend:** Flask (Python)
+- **Site generator:** Flask + Frozen-Flask (Python)
 - **CSS:** Bootstrap 5.3 + Bootstrap Icons
 - **Fonts:** Google Fonts (Montserrat, Open Sans)
-- **Hosting:** Homelab server (Norad)
-- **Reverse Proxy:** Caddy
-- **CDN:** Cloudflare
+- **Hosting and CDN:** Cloudflare Workers
 
 ### Pages
 
@@ -49,7 +47,9 @@ This generates static HTML in the `build/` directory for deployment.
 
 ### Deployment
 
-The site runs as a Docker container on my homelab server, accessible at `https://benjimanclarke.ie`
+Pushing to `main` triggers the configured Cloudflare Workers Build. It generates and deploys the static `build/` output to `https://benjimanclarke.ie`.
+
+The site is static in production: Flask is used at build time to render pages, not as a continuously running web server.
 
 ### Features
 
